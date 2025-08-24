@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Pharmacy - Your Trusted Health Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .cart-count {
+            top: -8px;
+            right: -8px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-plus-circle text-white text-2xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-blue-600">MediCare<span class="text-green-500">+</span></h1>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Products</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Prescriptions</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Health Info</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-user-md mr-2"></i>Find a Doctor
+                    </button>
+                    <div class="relative">
+                        <button class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-shopping-cart text-blue-600"></i>
+                            <span class="cart-count absolute bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                    <button class="md:hidden bg-blue-600 text-white p-3 rounded-lg">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                        Your Health is Our <span class="text-blue-600">Priority</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Trusted pharmacy services with over 20 years of experience. Get your prescriptions filled quickly and conveniently, with free delivery available.
+                    </p>
+                    
+                    <!-- Search Box -->
+                    <div class="bg-white rounded-full shadow-lg p-1 mb-8">
+                        <div class="flex items-center">
+                            <input type="text" placeholder="Search medications, vitamins, or health products..." 
+                                   class="flex-1 px-6 py-4 border-0 rounded-l-full focus:outline-none">
+                            <button class="gradient-bg text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity">
+                                <i class="fas fa-search mr-2"></i>Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600">500+</div>
+                            <div class="text-gray-600 text-sm">Medications</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-500">24/7</div>
+                            <div class="text-gray-600 text-sm">Pharmacy Support</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600">Free</div>
+                            <div class="text-gray-600 text-sm">Delivery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pulse-animation">
+                    <img src="https://placehold.co/600x400" alt="Modern pharmacy interior with clean shelves displaying various medications and healthcare products, friendly pharmacist assisting customer" class="rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Shop by Category</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Category 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-pills text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Prescription Drugs</h3>
+                    <p class="text-gray-600 text-sm">Fast refills and delivery</p>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-capsules text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Vitamins & Supplements</h3>
+                    <p class="text-gray-600 text-sm">Quality health supplements</p>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-baby text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Baby Care</h3>
+                    <p class="text-gray-600 text-sm">Gentle products for infants</p>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-first-aid text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">First Aid</h3>
+                    <p class="text-gray-600 text-sm">Emergency care supplies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800">Featured Products</h2>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">View All →</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-100">
+                        <img src="https://placehold.co/300x200" alt="Premium multivitamin supplement bottle with various vitamins and minerals displayed on a clean white background" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Multivitamin Complex</h3>
+                        <p class="text-gray-600 text-sm mb-4">Complete daily nutrition support</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$24.99</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-100">
+                        <img src="https://placehold.co/300x200" alt="Pain relief medication package featuring anti-inflammatory tablets with modern pharmaceutical packaging design" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Pain Relief Capsules</h3>
+                        <p class="text-gray-600 text-sm mb-4">Fast-acting pain management</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$18.50</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-100">
+                        <img src="https://placehold.co/300x200" alt="Natural immune booster supplement with herbal ingredients in an amber glass bottle surrounded by fresh herbs" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Immune Booster</h3>
+                        <p class="text-gray-600 text-sm mb-4">Natural immune support</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$32.75</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gray-100">
+                        <img src="https://placehold.co/300x200" alt="Skincare moisturizing cream tube with hydrating formula for sensitive skin, displayed with natural botanical elements" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">Hydrating Cream</h3>
+                        <p class="text-gray-600 text-sm mb-4">For sensitive skin care</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$15.99</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Premium Services</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-truck text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Free Delivery</h3>
+                    <p class="text-white text-opacity-90">Same-day delivery within city limits for all prescription orders.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-md text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Pharmacist Consultations</h3>
+                    <p class="text-white text-opacity-90">Free consultations with our licensed pharmacists.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-mobile-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Mobile App</h3>
+                    <p class="text-white text-opacity-90">Manage prescriptions and orders through our mobile application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tips Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Health & Wellness Tips</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <img src="https://placehold.co/400x250" alt="Healthy lifestyle infographic showing balanced diet, exercise, and mental wellness activities in a modern aesthetic" class="rounded-xl mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800 mb-3">Daily Health Habits</h3>
+                    <p class="text-gray-600 mb-4">Simple daily routines that can significantly improve your overall health and wellbeing.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Read More →</a>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <img src="https://placehold.co/400x250" alt="Seasonal allergy prevention guide with illustrations of common allergens and protective measures during different seasons" class="rounded-xl mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800 mb-3">Seasonal Allergy Guide</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive guide to managing allergies throughout the year with proper medication.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Read More →</a>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <img src="https://placehold.co/400x250" alt="Medication management system showing organized pill containers and digital reminders for proper dosage timing" class="rounded-xl mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800 mb-3">Medication Management</h3>
+                    <p class="text-gray-600 mb-4">Best practices for organizing and tracking your medications for optimal results.</p>
+                    <a href="#" class="text-blue-600 font-semibold hover:text-blue-700">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Customers Say</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Regular Customer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The delivery service is incredible! My medications always arrive on time, and the pharmacists are so knowledgeable."</p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Mike Thompson</h4>
+                            <p class="text-gray-600 text-sm">New Customer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"I was impressed by how quickly they processed my first prescription. The online system is very user-friendly!"</p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Senior Customer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"As a senior, I appreciate the patience and care the staff shows. They always explain everything clearly."</p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-plus-circle text-white"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">MediCare<span class="text-green-400">+</span></h2>
+                    </div>
+                    <p class="text-gray-400 mb-6">Your trusted partner in health and wellness for over 20 years.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pharmacies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Prescription Refills</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Medication Delivery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Immunizations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Health Screenings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Medication Therapy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">123 Health Street, Medical District</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">(555) 123-HEALTH</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">info@medicarepharmacy.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">Open 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2024 MediCare Pharmacy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('button:has(.fa-cart-plus)');
+            const cartCount = document.querySelector('.cart-count');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    let currentCount = parseInt(cartCount.textContent);
+                    cartCount.textContent = currentCount + 1;
+                    
+                    // Add animation effect
+                    cartCount.classList.add('animate-bounce');
+                    setTimeout(() => {
+                        cartCount.classList.remove('animate-bounce');
+                    }, 1000);
+                    
+                    // Show added to cart message
+                    const productName = this.closest('.p-6').querySelector('h3').textContent;
+                    showNotification(`${productName} added to cart!`);
+                });
+            });
+            
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-transform duration-300';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 2000);
+            }
+            
+            // Search functionality
+            const searchForm = document.querySelector('input[type="text"]').closest('div');
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchTerm = this.querySelector('input').value;
+                if (searchTerm.trim()) {
+                    showNotification(`Searching for "${searchTerm}"...`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
